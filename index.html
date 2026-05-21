@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Big Mike — Dallas Personal Injury Lawyer · Allbee Law Firm</title>
+<meta name="description" content="Hurt in Dallas? Call Big Mike. 240+ five-star reviews, free case review, no fee unless we win. Mike Allbee answers his phone — Dallas, Arlington, Fort Worth." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy-950:#0A1424;
+    --navy-900:#0F1B2E;
+    --navy-800:#152641;
+    --navy-700:#1d3357;
+    --gold-500:#C9A55B;
+    --gold-400:#D7B775;
+    --gold-300:#E8CFA1;
+    --ivory:#F5EFE2;
+    --paper:#FAF7F0;
+    --ink:#101826;
+    --muted:#5b6677;
+    --line:rgba(15,27,46,.12);
+    --line-on-navy:rgba(245,239,226,.14);
+    --ok:#1f7a3a;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .serif{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-0.01em}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  @media (max-width:640px){.wrap{padding:0 20px}}
+
+  /* ---------- HEADER ---------- */
+  .header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,20,36,.95);
+    backdrop-filter:saturate(140%) blur(8px);
+    -webkit-backdrop-filter:saturate(140%) blur(8px);
+    color:var(--ivory);
+    border-bottom:1px solid var(--line-on-navy);
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:74px;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand-mark{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--gold-500);color:var(--navy-900);
+    display:grid;place-items:center;font-weight:900;font-size:16px;
+    box-shadow:inset 0 -2px 0 rgba(0,0,0,.18);
+    flex:none;
+  }
+  .brand-name{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+  .brand-top{font-weight:900;letter-spacing:.18em;font-size:13px;color:var(--ivory)}
+  .brand-sub{font-size:11px;letter-spacing:.14em;color:var(--gold-400);text-transform:uppercase}
+  .nav{display:flex;align-items:center;gap:28px}
+  .nav a{font-size:14px;color:rgba(245,239,226,.78);font-weight:500}
+  .nav a:hover{color:var(--ivory)}
+  .header-call{display:flex;align-items:center;gap:14px}
+  .phone-link{
+    display:flex;align-items:center;gap:10px;
+    font-weight:800;font-size:18px;color:var(--ivory);
+    letter-spacing:-0.01em;
+  }
+  .phone-link .dot{
+    width:9px;height:9px;border-radius:50%;background:var(--gold-500);
+    box-shadow:0 0 0 4px rgba(201,165,91,.18);
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-weight:700;font-size:14px;letter-spacing:.01em;
+    padding:12px 18px;border-radius:8px;
+    transition:transform .15s ease, background .15s ease, color .15s ease, box-shadow .15s ease;
+    border:1px solid transparent;cursor:pointer;
+    text-align:center;
+  }
+  .btn-gold{background:var(--gold-500);color:var(--navy-900)}
+  .btn-gold:hover{background:var(--gold-400);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--ivory);border-color:rgba(245,239,226,.28)}
+  .btn-ghost:hover{background:rgba(245,239,226,.08);border-color:var(--ivory)}
+  .btn-dark{background:var(--navy-900);color:var(--ivory)}
+  .btn-dark:hover{background:#142340}
+  .btn-lg{font-size:16px;padding:16px 22px;border-radius:10px}
+  @media (max-width:900px){
+    .nav{display:none}
+    .header-call .phone-link span.num{font-size:16px}
+  }
+  @media (max-width:560px){
+    .header-inner{height:64px}
+    .brand-sub{display:none}
+    .header-call .btn{display:none}
+    .phone-link{font-size:16px}
+    .phone-link .label{display:none}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:
+      linear-gradient(180deg, rgba(10,20,36,.78) 0%, rgba(10,20,36,.86) 60%, rgba(10,20,36,.94) 100%),
+      url('assets/dallas-skyline.jpg') center / cover no-repeat;
+    color:var(--ivory);
+    overflow:hidden;
+    border-bottom:1px solid rgba(201,165,91,.18);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(800px 400px at 80% 20%, rgba(201,165,91,.10), transparent 60%);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:56px;
+    padding:80px 0 96px;align-items:center;
+  }
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    background:rgba(201,165,91,.12);
+    border:1px solid rgba(201,165,91,.35);
+    color:var(--gold-300);
+    padding:7px 14px;border-radius:999px;
+    font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-family:'Inter',sans-serif;
+    font-weight:800;font-size:clamp(40px,5.4vw,68px);
+    line-height:1.02;letter-spacing:-0.025em;
+    margin:0 0 22px;color:var(--ivory);
+  }
+  .hero h1 .accent{
+    display:inline-block;color:var(--gold-400);
+    font-family:'Fraunces',Georgia,serif;font-weight:600;font-style:italic;
+    letter-spacing:-0.02em;
+  }
+  .hero p.lead{
+    font-size:clamp(17px,1.7vw,20px);color:rgba(245,239,226,.82);
+    margin:0 0 32px;max-width:560px;line-height:1.5;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+  .hero-meta{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .rating{
+    display:flex;align-items:center;gap:10px;
+    background:rgba(245,239,226,.06);
+    border:1px solid rgba(245,239,226,.14);
+    padding:10px 14px;border-radius:10px;
+  }
+  .rating .stars{color:var(--gold-400);font-size:16px;letter-spacing:1px}
+  .rating .num{font-weight:800;font-size:15px}
+  .rating .meta{font-size:12px;color:rgba(245,239,226,.6);letter-spacing:.04em}
+  .hero-trust{font-size:13px;color:rgba(245,239,226,.55);letter-spacing:.04em}
+
+  .hero-card{
+    position:relative;
+    border-radius:14px;overflow:hidden;
+    background:#000;
+    box-shadow:0 30px 80px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(201,165,91,.22);
+    aspect-ratio: 4/5;
+  }
+  .hero-card img{width:100%;height:100%;object-fit:cover;opacity:.96}
+  .hero-card .nameplate{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:22px 22px 20px;
+    background:linear-gradient(0deg, rgba(10,20,36,.92), rgba(10,20,36,0));
+    color:var(--ivory);
+  }
+  .hero-card .nameplate .who{font-family:'Fraunces',Georgia,serif;font-size:24px;font-weight:700;letter-spacing:-0.01em}
+  .hero-card .nameplate .role{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-400);margin-top:4px}
+  .hero-card .badge{
+    position:absolute;top:18px;left:18px;
+    background:var(--gold-500);color:var(--navy-900);
+    font-weight:800;font-size:11px;letter-spacing:.18em;
+    padding:7px 12px;border-radius:6px;text-transform:uppercase;
+  }
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:36px;padding:56px 0 64px}
+    .hero-card{max-width:420px;margin:0 auto;aspect-ratio:4/4.4}
+  }
+  @media (max-width:560px){
+    .hero-inner{padding:40px 0 52px}
+    .hero-ctas .btn{flex:1 1 100%}
+  }
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust-strip{
+    background:var(--navy-900);color:var(--ivory);
+    border-top:1px solid rgba(201,165,91,.22);
+    border-bottom:1px solid rgba(245,239,226,.06);
+  }
+  .trust-strip .row{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:24px;padding:18px 0;flex-wrap:wrap;
+  }
+  .trust-strip .item{
+    display:flex;align-items:center;gap:10px;
+    font-size:13.5px;font-weight:500;color:rgba(245,239,226,.86);
+    letter-spacing:.01em;
+  }
+  .trust-strip .item .ic{
+    width:22px;height:22px;border-radius:50%;
+    background:rgba(201,165,91,.16);color:var(--gold-400);
+    display:grid;place-items:center;font-size:11px;font-weight:700;flex:none;
+  }
+
+  /* ---------- SECTION FRAMING ---------- */
+  section{padding:84px 0;position:relative}
+  @media (max-width:640px){section{padding:60px 0}}
+  .eyebrow{
+    display:inline-block;
+    font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold-500);margin-bottom:14px;
+  }
+  .section-title{
+    font-family:'Inter',sans-serif;font-weight:800;
+    font-size:clamp(30px,3.4vw,44px);
+    line-height:1.08;letter-spacing:-0.02em;
+    margin:0 0 16px;color:var(--navy-900);
+  }
+  .section-title em{font-family:'Fraunces',Georgia,serif;font-weight:600;font-style:italic;color:var(--navy-800)}
+  .section-lead{
+    font-size:17px;color:var(--muted);max-width:640px;margin:0 0 36px;
+  }
+  .section-head{margin-bottom:48px}
+
+  /* ---------- PRACTICE AREAS ---------- */
+  .areas-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  }
+  .area{
+    background:#fff;border:1px solid var(--line);
+    border-radius:14px;padding:28px 24px;
+    display:flex;flex-direction:column;gap:14px;
+    transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  }
+  .area:hover{border-color:var(--gold-500);transform:translateY(-2px);box-shadow:0 14px 40px -22px rgba(15,27,46,.35)}
+  .area .ic{
+    width:46px;height:46px;border-radius:10px;
+    background:var(--navy-900);color:var(--gold-400);
+    display:grid;place-items:center;
+  }
+  .area h3{font-size:18px;margin:0;font-weight:700;letter-spacing:-0.01em;color:var(--navy-900)}
+  .area p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55}
+  .area .link{
+    margin-top:auto;font-size:13px;font-weight:700;color:var(--navy-800);
+    letter-spacing:.04em;display:inline-flex;align-items:center;gap:6px;
+  }
+  .area .link::after{content:"→";transition:transform .2s ease}
+  .area:hover .link::after{transform:translateX(3px)}
+  @media (max-width:900px){.areas-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.areas-grid{grid-template-columns:1fr}}
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:28px 24px;position:relative;
+  }
+  .step .n{
+    font-family:'Fraunces',Georgia,serif;font-size:42px;font-weight:700;
+    color:var(--gold-500);line-height:1;letter-spacing:-0.03em;
+    margin-bottom:14px;display:block;
+  }
+  .step h4{font-size:17px;margin:0 0 8px;font-weight:700;color:var(--navy-900)}
+  .step p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55}
+  @media (max-width:900px){.how-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.how-grid{grid-template-columns:1fr}}
+
+  /* ---------- ATTORNEY BAND ---------- */
+  .attorney{
+    background:linear-gradient(180deg,#0A1424 0%,#0F1B2E 100%);
+    color:var(--ivory);
+  }
+  .attorney-grid{
+    display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;
+  }
+  .attorney-photo{
+    position:relative;border-radius:14px;overflow:hidden;
+    box-shadow:0 30px 80px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(201,165,91,.22);
+    aspect-ratio:4/5;
+  }
+  .attorney-photo img{width:100%;height:100%;object-fit:cover}
+  .attorney h2{color:var(--ivory)}
+  .attorney h2 em{color:var(--gold-400)}
+  .attorney p.lead2{font-size:18px;color:rgba(245,239,226,.78);line-height:1.6;margin:0 0 24px;max-width:560px}
+  .pillars{
+    display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;margin-bottom:32px;
+  }
+  .pillar{
+    background:rgba(245,239,226,.04);border:1px solid var(--line-on-navy);
+    border-radius:12px;padding:18px 18px;
+  }
+  .pillar .ic{
+    width:32px;height:32px;border-radius:8px;background:rgba(201,165,91,.16);
+    color:var(--gold-400);display:grid;place-items:center;font-size:14px;margin-bottom:10px;
+  }
+  .pillar h5{font-size:14.5px;margin:0 0 4px;font-weight:700;color:var(--ivory);letter-spacing:-0.01em}
+  .pillar p{font-size:13.5px;color:rgba(245,239,226,.62);margin:0;line-height:1.5}
+  @media (max-width:900px){
+    .attorney-grid{grid-template-columns:1fr;gap:32px}
+    .attorney-photo{max-width:380px;margin:0 auto}
+  }
+  @media (max-width:560px){.pillars{grid-template-columns:1fr}}
+
+  /* ---------- REVIEWS ---------- */
+  .reviews-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+  .review-summary{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:18px 22px;display:flex;align-items:center;gap:16px;
+  }
+  .review-summary .big{font-size:36px;font-weight:800;color:var(--navy-900);letter-spacing:-0.02em;line-height:1}
+  .review-summary .lab{font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .review-summary .stars{color:var(--gold-500);font-size:18px;letter-spacing:2px}
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .review{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:28px 26px;display:flex;flex-direction:column;gap:14px;
+  }
+  .review .stars{color:var(--gold-500);font-size:16px;letter-spacing:2px}
+  .review p{font-size:15.5px;color:var(--ink);margin:0;line-height:1.6}
+  .review .who{
+    display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:14px;
+    border-top:1px solid var(--line);
+  }
+  .review .av{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--navy-900);color:var(--gold-400);
+    display:grid;place-items:center;font-weight:700;font-size:14px;
+  }
+  .review .who .name{font-size:14px;font-weight:700;color:var(--navy-900)}
+  .review .who .src{font-size:12px;color:var(--muted)}
+  @media (max-width:900px){.reviews-grid{grid-template-columns:1fr}}
+
+  /* ---------- CONTACT / CALLBACK ---------- */
+  .contact{background:var(--navy-950);color:var(--ivory);position:relative;overflow:hidden}
+  .contact::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(600px 300px at 90% 10%, rgba(201,165,91,.10), transparent 70%),
+      radial-gradient(700px 360px at 10% 90%, rgba(201,165,91,.06), transparent 70%);
+    pointer-events:none;
+  }
+  .contact-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .contact h2{color:var(--ivory)}
+  .contact h2 em{color:var(--gold-400)}
+  .contact .lead2{font-size:18px;color:rgba(245,239,226,.78);line-height:1.6;margin:0 0 24px;max-width:480px}
+  .contact-points{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+  .contact-points .row{display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(245,239,226,.86)}
+  .contact-points .ic{
+    width:36px;height:36px;border-radius:8px;
+    background:rgba(201,165,91,.14);color:var(--gold-400);
+    display:grid;place-items:center;flex:none;
+  }
+  .big-call{
+    margin-top:8px;display:flex;align-items:center;gap:16px;
+    background:rgba(245,239,226,.04);border:1px solid rgba(201,165,91,.3);
+    padding:18px 22px;border-radius:12px;
+  }
+  .big-call .num{font-size:30px;font-weight:800;letter-spacing:-0.01em;color:var(--ivory)}
+  .big-call .lab{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-400)}
+
+  form.card{
+    background:#fff;border-radius:14px;padding:32px;color:var(--ink);
+    box-shadow:0 30px 80px -30px rgba(0,0,0,.5);
+  }
+  form.card h3{font-size:22px;margin:0 0 6px;color:var(--navy-900);font-weight:800;letter-spacing:-0.01em}
+  form.card .sub{font-size:14px;color:var(--muted);margin-bottom:22px}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .field label{font-size:12.5px;font-weight:700;color:var(--navy-900);letter-spacing:.04em;text-transform:uppercase}
+  .field input,.field select,.field textarea{
+    font-family:inherit;font-size:15px;color:var(--ink);
+    padding:12px 14px;border-radius:8px;border:1px solid var(--line);
+    background:#fff;outline:none;transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    border-color:var(--gold-500);box-shadow:0 0 0 3px rgba(201,165,91,.18);
+  }
+  .field textarea{resize:vertical;min-height:96px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form-foot{font-size:12px;color:var(--muted);margin-top:8px}
+  .ok-state{
+    display:none;background:#eef8f1;border:1px solid #bfe1ca;color:#0d4d23;
+    padding:18px;border-radius:10px;font-size:14.5px;line-height:1.55;
+  }
+  .ok-state.show{display:block}
+  form.submitted .form-body{display:none}
+  form.submitted .ok-state{display:block}
+  @media (max-width:900px){
+    .contact-grid{grid-template-columns:1fr;gap:32px}
+    .row2{grid-template-columns:1fr}
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#070e1a;color:rgba(245,239,226,.7);padding:48px 0 28px;border-top:1px solid rgba(201,165,91,.18)}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+  footer h6{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-400);margin:0 0 14px}
+  footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  footer a{color:rgba(245,239,226,.7);font-size:14px}
+  footer a:hover{color:var(--ivory)}
+  .foot-brand .name{
+    font-family:'Fraunces',Georgia,serif;font-size:22px;font-weight:700;color:var(--ivory);
+    letter-spacing:-0.01em;
+  }
+  .foot-brand p{font-size:14px;color:rgba(245,239,226,.6);margin:10px 0 0;max-width:320px;line-height:1.6}
+  .foot-bottom{
+    border-top:1px solid rgba(245,239,226,.08);padding-top:22px;
+    display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    font-size:12px;color:rgba(245,239,226,.45);line-height:1.6;
+  }
+  .disclaimer{max-width:780px}
+  @media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+  /* ---------- STICKY MOBILE CALL BAR ---------- */
+  .mobile-call{
+    display:none;
+    position:fixed;left:12px;right:12px;bottom:12px;z-index:60;
+    background:var(--navy-900);color:var(--ivory);
+    border:1px solid rgba(201,165,91,.32);border-radius:14px;
+    padding:12px 14px;align-items:center;justify-content:space-between;gap:12px;
+    box-shadow:0 16px 50px -10px rgba(0,0,0,.6);
+  }
+  .mobile-call .lab{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-400)}
+  .mobile-call .num{font-size:18px;font-weight:800;letter-spacing:-0.01em}
+  .mobile-call .btn{padding:10px 14px;font-size:13.5px}
+  @media (max-width:760px){.mobile-call{display:flex}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="wrap header-inner">
+    <a href="#" class="brand" aria-label="Big Mike — Allbee Law Firm">
+      <span class="brand-mark">BM</span>
+      <span class="brand-name">
+        <span class="brand-top">BIG MIKE</span>
+        <span class="brand-sub">Dallas Injury Law</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#areas">Practice Areas</a>
+      <a href="#how">How It Works</a>
+      <a href="#attorney">About Mike</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-call">
+      <a href="tel:+19724558908" class="phone-link" aria-label="Call Big Mike at (972) 455-8908">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="label" style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,239,226,.55);margin-right:2px;display:inline-block">Call</span>
+        <span class="num">(972) 455-8908</span>
+      </a>
+      <a href="#contact" class="btn btn-gold">Free Case Review</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="hero-eyebrow">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>
+        Available 24/7 · Dallas · Arlington · Fort Worth
+      </span>
+      <h1>
+        Hurt in Dallas?<br/>
+        <span class="accent">Call Big&nbsp;Mike.</span>
+      </h1>
+      <p class="lead">
+        240+ five-star reviews. Free case review. No fee unless we win. Mike Allbee answers his phone — and he takes your case to trial when the insurance company won&rsquo;t do right.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:+19724558908" class="btn btn-gold btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.07 2h3a2 2 0 0 1 2 1.72 12.78 12.78 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.78 12.78 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call now — (972) 455-8908
+        </a>
+        <a href="#contact" class="btn btn-ghost btn-lg">Get a free review</a>
+      </div>
+      <div class="hero-meta">
+        <div class="rating" aria-label="Google rating 4.9 from 240 reviews">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <div>
+            <div class="num">4.9 · 240 reviews</div>
+            <div class="meta">Google verified</div>
+          </div>
+        </div>
+        <div class="hero-trust">25+ years · 130+ trials · English &amp; Spanish</div>
+      </div>
+    </div>
+
+    <div class="hero-card" aria-label="Attorney Mike Allbee">
+      <span class="badge">Mike answers</span>
+      <img src="assets/attorney-mike.webp" alt="Attorney Mike Allbee, founder of Allbee Law Firm" loading="eager" />
+      <div class="nameplate">
+        <div class="who">Mike Allbee</div>
+        <div class="role">Founder · Trial Attorney · Dallas, TX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="wrap row">
+    <div class="item"><span class="ic">✓</span> No fee unless we win</div>
+    <div class="item"><span class="ic">✓</span> 24/7 availability</div>
+    <div class="item"><span class="ic">✓</span> Hablamos español</div>
+    <div class="item"><span class="ic">✓</span> Dallas · Arlington · Fort Worth</div>
+    <div class="item"><span class="ic">✓</span> 130+ cases taken to trial</div>
+  </div>
+</div>
+
+<!-- PRACTICE AREAS -->
+<section id="areas">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;max-width:680px;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">Practice Areas</span>
+      <h2 class="section-title">Cases <em>we handle</em> across North Texas</h2>
+      <p class="section-lead" style="margin-left:auto;margin-right:auto;text-align:left">
+        If someone else&rsquo;s negligence put you in the ER or off work, you have a case worth fighting. Here&rsquo;s where we win for clients most often.
+      </p>
+    </div>
+    <div class="areas-grid">
+
+      <div class="area">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14"/><path d="M3 17l1.5-6a2 2 0 0 1 2-1.5h11a2 2 0 0 1 2 1.5L21 17"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+        </div>
+        <h3>Car Accidents</h3>
+        <p>Rear-ends, T-bones, hit-and-runs. We deal with the insurance company so you can focus on getting better.</p>
+        <span class="link">See results</span>
+      </div>
+
+      <div class="area">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="11" rx="1"/><path d="M15 9h4l3 4v4h-7"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+        </div>
+        <h3>Truck &amp; 18-Wheeler</h3>
+        <p>Commercial-vehicle cases are bigger, faster, and more complex. We&rsquo;ve handled them for decades.</p>
+        <span class="link">See results</span>
+      </div>
+
+      <div class="area">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-2-6h-4l-1 3"/><path d="M14 5h3l1 3"/></svg>
+        </div>
+        <h3>Motorcycle Accidents</h3>
+        <p>Riders get blamed first and paid last. We&rsquo;ve seen every insurance tactic and we don&rsquo;t fall for it.</p>
+        <span class="link">See results</span>
+      </div>
+
+      <div class="area">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l6-12 4 6 6-10"/><path d="M14 14l-3 6"/></svg>
+        </div>
+        <h3>Slip &amp; Fall</h3>
+        <p>Grocery stores, apartment complexes, hotels. We prove negligence and force them to pay.</p>
+        <span class="link">See results</span>
+      </div>
+
+      <div class="area">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M5 8h14l-2 12H7L5 8z"/><path d="M9 12v4"/><path d="M15 12v4"/></svg>
+        </div>
+        <h3>Wrongful Death</h3>
+        <p>Nothing replaces a loved one. We handle these cases with the care your family deserves.</p>
+        <span class="link">See results</span>
+      </div>
+
+      <div class="area">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12c0-2 2-4 4-4s4 2 4 4-2 4-4 4-4-2-4-4z"/><path d="M14 8l4-3 1 3-3 2"/><path d="M14 16l4 3 1-3-3-2"/></svg>
+        </div>
+        <h3>Pedestrian &amp; Dog Bites</h3>
+        <p>Hit in a crosswalk or attacked by an unrestrained dog? Texas law is on your side. So are we.</p>
+        <span class="link">See results</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;max-width:680px;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">How It Works</span>
+      <h2 class="section-title">From your first call to <em>compensation</em></h2>
+      <p class="section-lead" style="margin-left:auto;margin-right:auto;text-align:left">
+        Most of our clients have never hired a lawyer before. We keep it simple — and we keep you updated every step.
+      </p>
+    </div>
+    <div class="how-grid">
+      <div class="step">
+        <span class="n">01</span>
+        <h4>Call</h4>
+        <p>You call, Mike answers. Free, confidential, no obligation. We&rsquo;ll listen and tell you straight whether you have a case.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h4>Free review</h4>
+        <p>We map the at-fault party, insurance limits, and likely value. We do it on the phone, in person, or at your bedside.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h4>We investigate</h4>
+        <p>Crash reports, witness statements, medical records, expert reconstruction. We build every case like it&rsquo;s going to trial.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h4>You get paid</h4>
+        <p>Most cases settle. Some go to trial. Either way, you owe nothing unless we recover money for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTORNEY BAND -->
+<section class="attorney" id="attorney">
+  <div class="wrap attorney-grid">
+    <div class="attorney-photo">
+      <img src="assets/attorney-hero.webp" alt="Allbee Law Firm — North Texas personal injury attorneys" loading="lazy" />
+    </div>
+    <div>
+      <span class="eyebrow" style="color:var(--gold-500)">About the Firm</span>
+      <h2 class="section-title">Award-winning. Top 10 Texas <em>personal injury</em> law firm.</h2>
+      <p class="lead2">
+        Allbee Law Firm has spent over two decades fighting for injured Texans. We&rsquo;ve filed lawsuits on hundreds of cases and taken more than 130 of them all the way to trial. When insurance companies don&rsquo;t do right, we&rsquo;re prepared to walk into a courtroom.
+      </p>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h5>No fee unless we win</h5>
+          <p>Pure contingency. If we don&rsquo;t recover, you owe nothing.</p>
+        </div>
+        <div class="pillar">
+          <div class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .8-4.4 4.3 1 6.4L12 16.8 6.4 19.5l1-6.4L3 8.8 9 8z"/></svg>
+          </div>
+          <h5>Top 10 Texas firm</h5>
+          <p>Recognized for results and client service across the state.</p>
+        </div>
+        <div class="pillar">
+          <div class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5z"/><path d="M3 21c0-4.4 4-7 9-7s9 2.6 9 7"/></svg>
+          </div>
+          <h5>Mike answers personally</h5>
+          <p>Speak with your lawyer — not a call center or paralegal.</p>
+        </div>
+        <div class="pillar">
+          <div class="ic">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4-9 4-9-4 9-4z"/><path d="M3 10l9 4 9-4"/><path d="M3 14l9 4 9-4"/></svg>
+          </div>
+          <h5>130+ trials</h5>
+          <p>We prepare every case as if it will go to trial.</p>
+        </div>
+      </div>
+      <a href="tel:+19724558908" class="btn btn-gold btn-lg">Call (972) 455-8908</a>
+      <a href="#contact" class="btn btn-ghost btn-lg" style="margin-left:8px">Send a message</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="reviews-head">
+      <div>
+        <span class="eyebrow">Client Reviews</span>
+        <h2 class="section-title">Real clients. <em>Real results.</em></h2>
+        <p class="section-lead">
+          Don&rsquo;t take our word for it — these are folks Big Mike helped after a wreck, a fall, or worse.
+        </p>
+      </div>
+      <div class="review-summary">
+        <div>
+          <div class="big">4.9</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div>
+          <div class="lab">240 Google reviews</div>
+          <div style="font-size:13.5px;color:var(--muted);margin-top:4px">Verified · Updated weekly</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <article class="review">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>“Mike picked up the phone the night of my wreck. He explained everything in plain English and stayed on top of the insurance company for months. I never felt like a number.”</p>
+        <div class="who">
+          <div class="av">JR</div>
+          <div>
+            <div class="name">Jasmine R.</div>
+            <div class="src">Google review · Dallas</div>
+          </div>
+        </div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>“The insurance offer was a joke. Mike filed suit, took it all the way through depositions, and got a settlement that actually covered my surgery and lost wages. Worth every penny.”</p>
+        <div class="who">
+          <div class="av">DM</div>
+          <div>
+            <div class="name">Daniel M.</div>
+            <div class="src">Google review · Arlington</div>
+          </div>
+        </div>
+      </article>
+      <article class="review">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>“After my husband&rsquo;s 18-wheeler accident we were lost. The team kept us informed every week. Honest, calm, and tough when it counted. I recommend them to everyone in Grand Prairie.”</p>
+        <div class="who">
+          <div class="av">CT</div>
+          <div>
+            <div class="name">Carolina T.</div>
+            <div class="src">Google review · Grand Prairie</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Free Case Review</span>
+      <h2 class="section-title">Talk to Big&nbsp;Mike <em>today.</em></h2>
+      <p class="lead2">
+        Call, text, or send a message. We respond within the hour during business time and within the same day, 24/7. No fee unless we recover money for you.
+      </p>
+
+      <div class="contact-points">
+        <div class="row">
+          <div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4.07 2h3a2 2 0 0 1 2 1.72 12.78 12.78 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.78 12.78 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <a href="tel:+19724558908"><strong>(972) 455-8908</strong> · Available 24/7</a>
+        </div>
+        <div class="row">
+          <div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <span>5787 S. Hampton Rd., #445 · Dallas, TX 75232</span>
+        </div>
+        <div class="row">
+          <div class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <span>Open 24/7 · Hablamos español</span>
+        </div>
+      </div>
+
+      <div class="big-call">
+        <div>
+          <div class="lab">Talk to Mike</div>
+          <a href="tel:+19724558908" class="num">(972) 455-8908</a>
+        </div>
+        <a href="tel:+19724558908" class="btn btn-gold" style="margin-left:auto">Call now</a>
+      </div>
+    </div>
+
+    <form class="card" id="lead-form" onsubmit="return submitForm(event)">
+      <div class="form-body">
+        <h3>Free case review</h3>
+        <p class="sub">Tell us a little about what happened. We&rsquo;ll call you back fast.</p>
+        <div class="row2">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(214) 555-0100" />
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="f-type">Type of injury</label>
+            <select id="f-type" name="type" required>
+              <option value="">Select one…</option>
+              <option>Car accident</option>
+              <option>Truck / 18-wheeler</option>
+              <option>Motorcycle</option>
+              <option>Slip &amp; fall</option>
+              <option>Wrongful death</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-when">When did it happen?</label>
+            <input id="f-when" name="when" type="text" placeholder="Last week, March 12, etc." />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">What happened?</label>
+          <textarea id="f-msg" name="message" placeholder="Briefly describe the accident and any injuries."></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-lg" style="width:100%">Send free review request</button>
+        <p class="form-foot">By submitting you agree to be contacted. This does not create an attorney–client relationship.</p>
+      </div>
+      <div class="ok-state" role="status" aria-live="polite">
+        <strong>Got it.</strong> Big Mike or someone from the team will call you back shortly. If it&rsquo;s urgent, dial <a href="tel:+19724558908" style="color:var(--ok);font-weight:700">(972) 455-8908</a> right now.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="name">Allbee Law Firm</div>
+        <p>Dallas–Fort Worth personal injury attorneys. Serving North Texas since 2000. Award-winning trial lawyers who answer the phone.</p>
+      </div>
+      <div>
+        <h6>Practice Areas</h6>
+        <ul>
+          <li><a href="#areas">Car accidents</a></li>
+          <li><a href="#areas">Truck &amp; 18-wheeler</a></li>
+          <li><a href="#areas">Motorcycle</a></li>
+          <li><a href="#areas">Slip &amp; fall</a></li>
+          <li><a href="#areas">Wrongful death</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Firm</h6>
+        <ul>
+          <li><a href="#attorney">About the firm</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Contact</h6>
+        <ul>
+          <li><a href="tel:+19724558908"><strong>(972) 455-8908</strong></a></li>
+          <li>5787 S. Hampton Rd. #445</li>
+          <li>Dallas, TX 75232</li>
+          <li>Open 24/7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2025 Allbee Law Firm. All rights reserved.</div>
+      <div class="disclaimer">
+        Past results do not guarantee future outcomes. Prior results do not guarantee a similar outcome. The information on this site is for general purposes only and does not constitute legal advice. Contacting us does not create an attorney–client relationship.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CALL BAR -->
+<a href="tel:+19724558908" class="mobile-call" aria-label="Call (972) 455-8908">
+  <div>
+    <div class="lab">Talk to Mike</div>
+    <div class="num">(972) 455-8908</div>
+  </div>
+  <span class="btn btn-gold">Call now</span>
+</a>
+
+<script>
+  function submitForm(e){
+    e.preventDefault();
+    var f = document.getElementById('lead-form');
+    f.classList.add('submitted');
+    f.querySelector('.ok-state').classList.add('show');
+    f.scrollIntoView({behavior:'smooth', block:'center'});
+    return false;
+  }
+</script>
+</body>
+</html>
